@@ -11,7 +11,20 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @IBOutlet weak var window: NSWindow!
+    var mainWindowController: MainWindowController?
+    
+    func applicationDidFinishLaunching(notification: NSNotification) {
+         // Create window controller from XIB
+        let mainWindowController = MainWindowController(windowNibName: "MainWindowController")
+        
+        // Put the window of the window controller on screen
+        mainWindowController.showWindow(self)
+        
+        // Set the property to point to the window controller
+        self.mainWindowController = mainWindowController
+    }
 
+    
+    
 }
 

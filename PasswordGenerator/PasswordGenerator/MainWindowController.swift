@@ -10,10 +10,17 @@ import Cocoa
 
 class MainWindowController: NSWindowController {
 
+    @IBOutlet weak var textField: NSTextField!
+    
     override func windowDidLoad() {
         super.windowDidLoad()
-
-        // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+        
+        self.textField.textColor = NSColor.redColor()
+    }
+    
+    @IBAction func generatePassword(sender: AnyObject) {
+        // Tell the textField what to display
+        textField.stringValue = "button clicked"
     }
     
 }
