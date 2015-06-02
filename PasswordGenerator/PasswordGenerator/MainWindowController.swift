@@ -19,8 +19,9 @@ class MainWindowController: NSWindowController {
     }
     
     @IBAction func generatePassword(sender: AnyObject) {
-        // Tell the textField what to display
-        textField.stringValue = "button clicked"
+        // get a random string of length 8
+        let length = 8
+        textField.stringValue = generateRandomString(length)
     }
     
 }
