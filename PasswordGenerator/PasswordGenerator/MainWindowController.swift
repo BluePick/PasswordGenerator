@@ -12,6 +12,10 @@ class MainWindowController: NSWindowController {
 
     @IBOutlet weak var textField: NSTextField!
     
+    override var windowNibName: String? {
+        return "MainWindowController"
+    }
+    
     override func windowDidLoad() {
         super.windowDidLoad()
         
